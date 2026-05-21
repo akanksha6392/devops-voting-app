@@ -99,3 +99,31 @@ kubectl port-forward service/vote 31000:80
 
 Check worker and redis pods using:
 kubectl logs <pod-name>
+## Local Setup
+
+Run the following commands to deploy the application locally:
+```bash
+kubectl create -f k8s-specifications/
+
+kubectl port-forward service/vote 31000:80
+
+kubectl port-forward service/result 31001:80
+
+## Trade-offs
+
+Due to time constraints, a simplified GitHub Actions CI pipeline was implemented instead of a complete production-grade CI/CD workflow.
+
+Future improvements:
+- Docker image push to Docker Hub
+- Automated smoke testing
+- Helm support
+- Ingress configuration
+- Kubernetes Secrets and StatefulSets
+
+## CI/CD
+
+GitHub Actions CI pipeline has been configured for automated workflow execution.
+
+## Video Walkthrough
+
+Video Link: Add your Loom or YouTube video link here
