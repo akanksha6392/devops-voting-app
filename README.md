@@ -64,6 +64,7 @@ This isn't an example of a properly architected perfectly designed distributed a
 example of the various types of pieces and languages you might see (queues, persistent data, etc), and how to
 deal with them in Docker at a basic level.
 ## Screenshots
+
 ### Voting App
 ![Voting App](screenshots/vote-app.png.jpeg)
 
@@ -72,3 +73,29 @@ deal with them in Docker at a basic level.
 
 ### Kubernetes Pods
 ![Pods](screenshots/pods.png.jpeg)
+
+## Changes Made
+
+- Deployed the application on Kubernetes
+- Configured Docker Desktop Kubernetes
+- Used kubectl for deployment and monitoring
+- Added screenshots and documentation
+
+## Troubleshooting
+
+### Pods not starting
+
+Run:
+kubectl get pods
+
+kubectl describe pod <pod-name>
+
+### Vote app not opening
+
+Run:
+kubectl port-forward service/vote 31000:80
+
+### Result app not updating
+
+Check worker and redis pods using:
+kubectl logs <pod-name>
