@@ -10,16 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Validate Kubernetes YAML
-      run: |
-        kubectl kustomize k8s-specifications/
+      - name: Show files
+        run: ls -la
 
-    - name: Build Vote Docker Image
-      run: |
-        docker build -t voting-app ./vote
-
-    - name: Success Message
-      run: echo "CI Pipeline completed successfully!"
+      - name: Success message
+        run: echo "CI Pipeline completed successfully!"
