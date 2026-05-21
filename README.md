@@ -64,12 +64,11 @@ This isn't an example of a properly architected perfectly designed distributed a
 example of the various types of pieces and languages you might see (queues, persistent data, etc), and how to
 deal with them in Docker at a basic level.
 ## Screenshots
-
 ### Voting App
-![Voting App](screenshots/vote-app.png)
+![Voting App](screenshots/vote-app.png.jpeg)
 
 ### Result App
-![Result App](screenshots/result-app.png)
+![Result App](screenshots/result-app.png.jpeg)
 
 ### Kubernetes Pods
-![Pods](screenshots/pods.png)
+![Pods](screenshots/pods.png.jpeg)
